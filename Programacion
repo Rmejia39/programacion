@@ -1,0 +1,249 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Copia de Untitled3.ipynb",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Rmejia39/programacion/blob/main/Programacion\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Calcular las deducciones\n",
+        "sueldo= float(input(\"Escriba su sueldo:\"))\n",
+        "deducciones= [3,6,25,27]\n",
+        "\n",
+        "ISSS=(sueldo*deducciones[0])/100\n",
+        "AFP=(sueldo*deducciones[1])/100\n",
+        "ISR=(sueldo*deducciones[2])/100\n",
+        "totaldescuentos= ISSS+AFP+ISR\n",
+        "Total=sueldo-totaldescuentos\n",
+        "print(\"**Deducciones**\")\n",
+        "print(\"ISSS:\",ISSS)\n",
+        "print(\"AFP:\",AFP)\n",
+        "print(\"ISR\",ISR)\n",
+        "print(\"**sueldo total**\")\n",
+        "print(\"Sueldo Neto:\",Total)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "_fP2CTCq4Se5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7eb5035e-699a-4fdb-e988-f11591669880"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escriba su sueldo:350\n",
+            "**Deducciones**\n",
+            "ISSS: 10.5\n",
+            "AFP: 21.0\n",
+            "ISR 87.5\n",
+            "**sueldo total**\n",
+            "Sueldo Neto: 231.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Calcular el valor a pagar según el el número de metros consumidos de agua potable\n",
+        "Costo= 7\n"
+      ],
+      "metadata": {
+        "id": "QipxEY8fEb2T"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "metros= int(input(\"Coloque la cantidad de metros consumidos\"))\n",
+        "if(metros<18):\n",
+        "  print(\"Total a pagar:\",Costo)\n",
+        "elif(metros<28):\n",
+        "  print(\"Total a pagar:\", 3.15+Costo)\n",
+        "elif(metros<40):\n",
+        "  print(\"Total a pagar:\", 11+Costo)\n",
+        "else:\n",
+        "   print(\"Max de metros a consumir es 40\")\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "y5XYHVMte8L1",
+        "outputId": "ed1d00cf-aef8-4161-99bc-2896691a0f49"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Coloque la cantidad de metros consumidos25\n",
+            "Total a pagar: 10.15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Desarrolle la tabla de meses acumulados a n meses\n",
+        "def Acumulación(mes): d = mes acumulado = d *\n",
+        "(d+1)/2 resultado = acumulado print(\"**MES**\"), d,\n",
+        "\"\\d**ACUMULADO**\",resultado) mes =\n",
+        "int(input(\"Digite los meses a pagar:\"))\n",
+        "Acumulación(mes)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 130
+        },
+        "id": "0gReed5k9BO_",
+        "outputId": "748194bc-d3c5-40ec-b4f5-cb449b81bad7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-10-8fbfa1855188>\"\u001b[0;36m, line \u001b[0;32m2\u001b[0m\n\u001b[0;31m    def Acumulación(mes): d = mes acumulado = d *\u001b[0m\n\u001b[0m                                          ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Conversores\n",
+        "def convertir(conversor,de,a,cantidad):\n",
+        "  return valores[conversor][a] / valores[conversor][de] * cantidad\n",
+        "\n",
+        "  etiquetas = [[],\n",
+        "  [\"seleccione una divisa\",\"1.Dolares\",\"2.Qutzales\",\"3.Lempiras\",\"4.Corodobas\",\"5.Pesos CR\",#Monedas\n",
+        "           \"6.Euros,\",\"7.colon SV\",\"8.Yanes\",\"9.Soles Peruanos\",\"10.pesos Mexicanos\"\n",
+        "     ],\n",
+        "  [\"Seleccione una unidad de medida\",\"1.Metro\",\"2.Milimetro\",\"3.Centimetro\",#Longitud\n",
+        "            \"4.Pie\",\"5.Varas\",\"6.Yardas\",\"7.Kilometros\",\"8.Millas\",\"9.Micrometro\",\"10.Nametro\",\n",
+        "     ],\n",
+        "  [\"Seleccione una unidad de medida\",\"1.Tonelada\",\"2.Kilogramo\",\"3.Gramo\",\"4.Centigramo\",#Masa\n",
+        "             \"5.Miligramo\",\"6.Microgramo\",\"7.Tonelada corta\",\"8.Stone\",\"9.Libra\",\"10.Onza\" \n",
+        "     ],\n",
+        "  [\"Seleccione una unidad de medida\",\"1.pebibyte\",\"2.Petabyte\",\"3.Tetibyte\",\"4.Terabyte\",\"5.Gibibyte\",#Almacenamiento\n",
+        "             \"6.Gigabyte\",\"7.Mebibyte\",\"8.Megabyte\",\"9.Kibibyte\",\"10.Kilobyte\",\"11.Byte\"\n",
+        "     ],\n",
+        "  [\"Seleccione una unidad de medida\",\"1.Siglo\",\"2.Decada\",\"3.Año natural\",\"4.Mes\",\"5.Semana\",#Tiempo\n",
+        "              \"6.Dia\",\"7.Hora\",\"8.Minuto\",\"9.Segundo\",\"10.Milisegundo\"\n",
+        "     ],\n",
+        "  [\"Seleccione una unidad de medida\",\"1.Metro cubico\",\"2.Litro\",\"3.Milimetro\",\"4.Galon imperial\",\"5.Cuarto imperial\",#Valumen\n",
+        "              \"6.Pinta imperial\",\"7.Taza imperial\",\"8.Onza liquida imperial\",\"9.Cucharada imperial\",\"10.Cucharadita imperial\"\n",
+        "     ],\n",
+        "  [\"Seleccione una unidad de medida\",\"1.Kilometro cuadrado\",\"2.Metro cuadrado\",\"3.Milla cuadrada\",\"4.Yarda cuadrada\",\"5.Pie cuadrado\",#Area,Manzanas,Tareas\n",
+        "              \"6.Pulgada cuadrada\",\"7.Hectarea\",\"8.Acre\",\"9.Tareas\",\"10.Manzanas\"\n",
+        "     ]\n",
+        "     ]  \n",
+        "\n",
+        "  valores =[[], \n",
+        "              [0, 1, 7.71, 24.51, 35.77, 664.64, 0.98, 8.75, 134.13, 3.84, 19.89], #Monedas \n",
+        "              [0, 1, 1000, 100, 3.2808, 1.19630819229167, 1.0936133, 0.001, 0.000621371, 1e+6, 1e+9], #Longitudes \n",
+        "              [0, 1, 1000, 1e+6, 1e+8, 1e+9, 1e+12, 1.102, 157.5, 2205, 35270], #Mesa \n",
+        "              [0, 1, 1.126, 1024, 1126, 1.049e+6, 1.126e+6, 1.074e+9, 1.126e+9, 1.1e+12, 1.126e+12, 1.126e+15], #Almacenamiento \n",
+        "              [0, 1, 10, 100, 1200, 5214, 36500, 876000, 5.256e+7, 3.154e+9, 3.154e+12], #Timpo \n",
+        "              [0, 1, 1000, 1e+6, 220, 879.9, 1760, 3520, 35200, 56310, 168900], #Volumen \n",
+        "              [0, 1, 1e+6, 0.3861, 1.196e+6, 1.076e+7, 1.55e+9, 100, 247.1, 1590.3307888, 141.7] #Area,Manzanas,Tareas \n",
+        "              ]\n",
+        "\n",
+        "  print(\"**Menu**-Conversor\")\n",
+        "  print(\"1.Divisas\")\n",
+        "  print(\"2.Longitud\")\n",
+        "  opcion= int(imput(\"Convertir:\"))\n",
+        "  print(\"Conversor Elegido:\",etiquetas[opcion])\n",
+        "  de= int(input(\"De:\"))\n",
+        "  a = int(input(\"A:\"))\n",
+        "  cantidad = int(input(\"Cantidad:\"))\n",
+        "  print(\"Convertir de\". etiquetas[opcion][de],\"a\",etiquetas[opcion][a],\"equivale a\",convertir(opcion,de,a,cantidad))\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "xEYAZFt-_jEW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Realizar un conversor propio\n",
+        "def convertir(opcion, de, a, cantidad):\n",
+        "  return valores[opcion][a] / valores[opcion][de] * cantidad\n",
+        "  etique = [\n",
+        "    0,\n",
+        "    [\"Seleccione lo que desea convertir\", \"1. Caja\", \"2. Unidades\"],\n",
+        "    [\"Seleccione lo que desea convertir\", \"1. Saco\", \"2. Libras\"],\n",
+        "    [\"Seleccione lo que desea convertir\", \"1. Fardo\", \"2. Unidades\"]\n",
+        "    ]\n",
+        "\n",
+        "  valor = [0,\n",
+        "   [0, 1, 25],\n",
+        "   [0, 1, 50],\n",
+        "   [0, 1, 5],\n",
+        " \n",
+        "  ]\n",
+        "  print(\"* MENU DE CONVERSORES *\")\n",
+        "  print(\"1. Cajas/Unidades\")\n",
+        "  print(\"2. Saco/Libras\")\n",
+        "  print(\"3. Fardo/Unidades\")\n",
+        "\n",
+        "  opcion = int(input(\"Opcion: \"))\n",
+        "\n",
+        "  print( etiquetas[opcion] )\n",
+        "  de = int(input(\"DE: \"))\n",
+        "  a = int(input(\"A: \"))\n",
+        "  cantidad = float(input(\"Cantidad: \"))\n",
+        "\n",
+        "  print( etiquetas[opcion][de], \" en \", etiquetas[opcion][a], \" equivale a: \", convertir(opcion, de, a, cantidad) )\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "C8HooD6XBIAm"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
